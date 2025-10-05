@@ -70,7 +70,7 @@ cd notebooks
 jupyter notebook model_training.ipynb
 Run all cells in the notebook to train and save the model to models/surge_predictor_rf.pkl
 
-# Create a .env file in the project root
+### Create a .env file in the project root
 echo "HUGGINGFACEHUB_API_TOKEN=your_token_here" > .env
 Get a free token at https://huggingface.co/settings/tokens
 
