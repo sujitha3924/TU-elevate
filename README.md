@@ -50,7 +50,7 @@ cd uber-smart-earner-assistant
 
 
 
-# Install dependencies
+### Install dependencies
 
 pip install -r requirements.txt
 
@@ -64,7 +64,7 @@ uber_hackathon_v2_mock_data.xlsx - cancellation_rates.csv
 uber_hackathon_v2_mock_data.xlsx - heatmap.csv
 
 
-# Train the model
+### Train the model
 
 cd notebooks
 jupyter notebook model_training.ipynb
@@ -74,32 +74,11 @@ Run all cells in the notebook to train and save the model to models/surge_predic
 echo "HUGGINGFACEHUB_API_TOKEN=your_token_here" > .env
 Get a free token at https://huggingface.co/settings/tokens
 
-# Start the Streamlit web interface:
+### Start the Streamlit web interface:
 streamlit run app_web.py
 The app will automatically open in your browser at http://localhost:8501. You can adjust settings in the sidebar to see how different conditions affect surge predictions and recommendations.
 
-Project Structure
-uber-smart-earner-assistant/
-├── data/                           # Your CSV data files
-├── models/                         # Trained ML models
-│   └── surge_predictor_rf.pkl
-├── notebooks/                      # Jupyter notebooks for analysis
-│   ├── data_analysis.ipynb
-│   └── model_training.ipynb
-├── src/                            # Main source code
-│   ├── agent.py                    # AI agent with Hugging Face integration
-│   ├── surge_predictor.py          # ML model wrapper
-│   ├── allocator.py                # Driver allocation logic
-│   ├── data_loader.py              # Data loading utilities
-│   ├── merge_tables.py             # Data merging functions
-│   └── recommender.py              # Basic recommender
-├── app.py                          # CLI application
-├── app_web.py                      # Streamlit web app
-├── requirements.txt                # Python dependencies
-├── .env                            # Environment variables 
-└── README.md                       # This file
-
-# How It Works
+### How It Works
 Model Training
 We trained a Random Forest model with 200 estimators on historical Uber data. The process involves:
 
@@ -120,7 +99,7 @@ How many hours the driver has worked
 Weather conditions and their impact
 City-specific demand patterns
 
-Technical Stack
+### Technical Stack
 
 Language: Python 3.13
 Machine Learning: scikit-learn (Random Forest Regressor)
